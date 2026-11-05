@@ -6,7 +6,7 @@ sqware `94e114614bec53424ac55e640fc80cf19a3e7107`.
 
 The server owns its register window, device directory and Sv39 tables,
 command/fault queues, completion fences and retained frame references. It
-accepts only the Kernel-stamped coordinating Hub sender. PCI enumeration,
+accepts only the Kernel-stamped device-coordination publisher. PCI enumeration,
 endpoint reset and VirtIO protocol policy remain with their owners.
 
 ## Layout
@@ -53,7 +53,14 @@ coordinates. It adds no legacy test scene.
 `ESTABLISH` establishes/reuses a persistent Domain. `ACQUIRE` reserves a private
 IOVA for the full Domain and Hub binding identity. `PUBLISH`, `INVALIDATE`,
 `QUIESCE` and `RELEASE` remain distinct operations. Caller identity comes from
-the Kernel; the runtime verifies the real Hub publisher before accepting work.
+the Kernel; the runtime verifies the declared `device/coord` publisher before
+accepting work. The coordination protocol and full binding identity belong to
+Hub, while the selected VirtIO block coordinator publishes that endpoint.
+
+PCI inspection and placement share a PCI task; the IOMMU engine is a separate
+authenticated peer at `iommu/entry`. IOMMU takes its region and retention from
+System, while BAR and DMA source handoff remain dynamic at PCI/coordinator and
+execution respectively. No static BAR or DMA source binding is declared here.
 
 The hold ledger remains the reference authority. Publication, invalidation,
 queue shutdown and readback retain their original ordering and failure/retry

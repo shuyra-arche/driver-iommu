@@ -70,6 +70,13 @@ DMA isolation, queue completion, recovery or teardown on hardware. They add no
 old test suite or kernel cluster; product composition validation belongs to the
 Vanllia intake checkpoint.
 
+The VirtIO block candidate `fecc0147065e1f00f5a30f77490a369582cfc2f2`
+authenticates PCI configuration/placement as the same PCI task and discovers
+IOMMU as a separate peer. Its `device/coord` source mark is the exact coordination
+mark used by this runtime's System publisher lookup. The IOMMU entry/sender
+checks require no change. BAR and execution DMA sources are dynamic; only the
+existing System retention and IOMMU region manifests are static IOMMU supplies.
+
 ## Attribution and license
 
 The selected source history identifies `anreonyr` under the source-recorded
