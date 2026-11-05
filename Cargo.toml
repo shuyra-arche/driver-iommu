@@ -1,7 +1,13 @@
 [workspace]
-members = ["declaration", "api", "hold"]
+members = ["declaration", "api", "hold", "server"]
 resolver = "3"
 
 [workspace.package]
 version = "0.1.0"
 edition = "2024"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
