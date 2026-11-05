@@ -60,8 +60,34 @@ dependencies = [
 name = "iommu-hold"
 version = "0.1.0"
 dependencies = [
- "env",
+ "kernel-api-env",
 ]
+
+[[package]]
+name = "kernel-api-env"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
+dependencies = [
+ "bitflags",
+ "erra",
+ "kernel-api-macros",
+ "kernel-api-wire",
+]
+
+[[package]]
+name = "kernel-api-macros"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "kernel-api-wire"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
 
 [[package]]
 name = "mold"
