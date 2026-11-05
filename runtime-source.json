@@ -1,0 +1,459 @@
+{
+  "source_repository": "https://github.com/anreonyr/sqware.git",
+  "source_commit": "94e114614bec53424ac55e640fc80cf19a3e7107",
+  "provider_base": "5d2038033efcbd55de77534b35e611729d4bd9bd",
+  "original_contract_provenance": "PROVENANCE.md (unchanged)",
+  "license_added": false,
+  "source_license_file_found": false,
+  "files": [
+    {
+      "source": "programs/src/driver/iommu/acquire.rs",
+      "destination": "server/src/acquire.rs",
+      "source_blob": "cbca2b21de2679bed314e2115aa379ab79f12dec",
+      "source_sha256": "a56cf0f6a97124da6cf6c66fdc3f7bfeb5e82f4bf0f457c5f937a99a87247e99",
+      "destination_sha256": "a56cf0f6a97124da6cf6c66fdc3f7bfeb5e82f4bf0f457c5f937a99a87247e99",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/binding.rs",
+      "destination": "server/src/binding.rs",
+      "source_blob": "c8087230b19f6057f03c64966842e31c64fa5334",
+      "source_sha256": "6601702f2c41e4f1360c462aa5c3efc6fa5f4a823df0913079441d2108e8f8b4",
+      "destination_sha256": "6601702f2c41e4f1360c462aa5c3efc6fa5f4a823df0913079441d2108e8f8b4",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/cache_step.rs",
+      "destination": "server/src/cache_step.rs",
+      "source_blob": "d9d0cd9e375887849a8fbb5fd9e78ebbde40f609",
+      "source_sha256": "eb20132ed35f8486fad700ce7edc28c5363c44b2052a97de91f07f00133e190a",
+      "destination_sha256": "eb20132ed35f8486fad700ce7edc28c5363c44b2052a97de91f07f00133e190a",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "3cfc3b8fd95899ec821071f432e3a7b18db262e9",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T18:19:33+08:00",
+        "subject": "Invalidate device contexts and separate hardware translation namespaces"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/context.rs",
+      "destination": "server/src/context.rs",
+      "source_blob": "cd9491214450f987f8ed34c8d18617a8c2f09c54",
+      "source_sha256": "ccbc42289375ca62af409f841ee0efd373fd8f65bf5cd09bf02a721857d0035a",
+      "destination_sha256": "ccbc42289375ca62af409f841ee0efd373fd8f65bf5cd09bf02a721857d0035a",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "3cfc3b8fd95899ec821071f432e3a7b18db262e9",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T18:19:33+08:00",
+        "subject": "Invalidate device contexts and separate hardware translation namespaces"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/cookie.rs",
+      "destination": "server/src/cookie.rs",
+      "source_blob": "2e56e9abe10baf72c4d0928b8172ef35381efa6a",
+      "source_sha256": "cc353cc1497026715f7a84414970233aec95175db9914c809b01c6e204cea9be",
+      "destination_sha256": "cc353cc1497026715f7a84414970233aec95175db9914c809b01c6e204cea9be",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "ee2f94cbfefbe081a263762595586240e6eb4093",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T14:47:50+08:00",
+        "subject": "Keep IOMMU publish and retire completions independently owned"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/core.rs",
+      "destination": "server/src/core.rs",
+      "source_blob": "9fa3ed23e81054e356e32c1856a0424b7259bb15",
+      "source_sha256": "8768388a7926f84df6504b069df52922f5f66643c597c9e36a024bc414e60a5a",
+      "destination_sha256": "962dee3c36fd56153db51be64656842fd005bafb34a0ba86bd62ae7ef32f5ea1",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "5d2f3de6a3dfd5da762c52148500072c04c4b4a8",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-25T00:28:29+08:00",
+        "subject": "Advance device bindings independently and retain exact BAR roots"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/domain.rs",
+      "destination": "server/src/domain.rs",
+      "source_blob": "e0a525171c3a24a422ff02bb2161718fd9d478d1",
+      "source_sha256": "35d337ccdfbe0aca4367822f08216836063e32fd890b14f132c3a3d76517ff0c",
+      "destination_sha256": "35d337ccdfbe0aca4367822f08216836063e32fd890b14f132c3a3d76517ff0c",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/domain_id.rs",
+      "destination": "server/src/domain_id.rs",
+      "source_blob": "32c2305a93400b477a745e5c087e23534a4c783a",
+      "source_sha256": "0de893af848059671752375de9709d9f27e1bc676b9a0b0fb60bd5af78ade3d1",
+      "destination_sha256": "0de893af848059671752375de9709d9f27e1bc676b9a0b0fb60bd5af78ade3d1",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/domain_range.rs",
+      "destination": "server/src/domain_range.rs",
+      "source_blob": "39f09887f2cf82e8a3e1dd26909abdf1c9939cfe",
+      "source_sha256": "3cd7b14c6f5d284ed611ff44dfbaad78e0c71409d7dcee4441599b1141c0c1fe",
+      "destination_sha256": "3cd7b14c6f5d284ed611ff44dfbaad78e0c71409d7dcee4441599b1141c0c1fe",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/engine.rs",
+      "destination": "server/src/engine.rs",
+      "source_blob": "02b2c78594907695c521105144487ca56eab553a",
+      "source_sha256": "c410ded7bc6ee10bbb23fa45af3945a4174642180507126e9369be193ed690ce",
+      "destination_sha256": "c410ded7bc6ee10bbb23fa45af3945a4174642180507126e9369be193ed690ce",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/fence.rs",
+      "destination": "server/src/fence.rs",
+      "source_blob": "1750d839116debd7cdf4d08baf8698ccf0fc4f17",
+      "source_sha256": "41c570329e82b31ca40e790204118276a34b39f2b440b8f0b5ca3b483ac41964",
+      "destination_sha256": "41c570329e82b31ca40e790204118276a34b39f2b440b8f0b5ca3b483ac41964",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "6d9ecf68d80a7a6a9c05dd1c44eee3d287ab0657",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-17T20:15:08+08:00",
+        "subject": "refactor(device): one type per file, and revoke the endpoint on a pre-publish failure"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/handshake.rs",
+      "destination": "server/src/handshake.rs",
+      "source_blob": "3a48ca5f8ace575a91e04b34a34c42f81a8b13a5",
+      "source_sha256": "1154ffa21c0d1b1611bac38502f8e3374ae2bf128c2b98142917d8bcd14da89b",
+      "destination_sha256": "1154ffa21c0d1b1611bac38502f8e3374ae2bf128c2b98142917d8bcd14da89b",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "6d9ecf68d80a7a6a9c05dd1c44eee3d287ab0657",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-17T20:15:08+08:00",
+        "subject": "refactor(device): one type per file, and revoke the endpoint on a pre-publish failure"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/invalidation.rs",
+      "destination": "server/src/invalidation.rs",
+      "source_blob": "5e19758b517230fd54149e66a287230bdc9dc102",
+      "source_sha256": "dea5a12a1ef7c83a334f3de105d8e9490fad6fd2fd51215485478dfa6c56cb29",
+      "destination_sha256": "dea5a12a1ef7c83a334f3de105d8e9490fad6fd2fd51215485478dfa6c56cb29",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "3cfc3b8fd95899ec821071f432e3a7b18db262e9",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T18:19:33+08:00",
+        "subject": "Invalidate device contexts and separate hardware translation namespaces"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/layout.rs",
+      "destination": "server/src/layout.rs",
+      "source_blob": "054e1822b53de719d9f3dcd1927a80f1730365a0",
+      "source_sha256": "6ad57163df43ab5122383ad508803bcb6b656b723e1b7bcc922622b16dc80274",
+      "destination_sha256": "6ad57163df43ab5122383ad508803bcb6b656b723e1b7bcc922622b16dc80274",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "3cfc3b8fd95899ec821071f432e3a7b18db262e9",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T18:19:33+08:00",
+        "subject": "Invalidate device contexts and separate hardware translation namespaces"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/pages.rs",
+      "destination": "server/src/pages.rs",
+      "source_blob": "b86d4c762a93ff900fcfd8a1a129aa097cbdb320",
+      "source_sha256": "f7a33af40695f15c13db538a319b08392e65c311093615d9cc5e3f846a5424d0",
+      "destination_sha256": "f7a33af40695f15c13db538a319b08392e65c311093615d9cc5e3f846a5424d0",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "852f1cf5b9f0c264555eb9956701dc8f5fb59340",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T20:23:53+08:00",
+        "subject": "Migrate driver windows to local derivation and retire AccordWindow"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/phase.rs",
+      "destination": "server/src/phase.rs",
+      "source_blob": "867f658df979e8627bdc958ed4e75a58033b8c27",
+      "source_sha256": "fdc3a235a3ee1b5ff4eb4b7ce07794503868a1a1ff00edda2c3c4b4dd9c299dc",
+      "destination_sha256": "fdc3a235a3ee1b5ff4eb4b7ce07794503868a1a1ff00edda2c3c4b4dd9c299dc",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0117e51376d7790fd074b92214f6f796d99fd151",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T03:08:56+08:00",
+        "subject": "Move DMA recovery into resident driver domains"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/queue.rs",
+      "destination": "server/src/queue.rs",
+      "source_blob": "3faf0e76a0c9ee296af6e18adfe6a144fbe8b410",
+      "source_sha256": "26877d26af572f3e49e624958bd94cae4de815312bb123a01862e4e267d16cfe",
+      "destination_sha256": "26877d26af572f3e49e624958bd94cae4de815312bb123a01862e4e267d16cfe",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "3cfc3b8fd95899ec821071f432e3a7b18db262e9",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T18:19:33+08:00",
+        "subject": "Invalidate device contexts and separate hardware translation namespaces"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/references.rs",
+      "destination": "server/src/references.rs",
+      "source_blob": "8bfa65e9a3155f76cdacf792f06b06f36579428f",
+      "source_sha256": "bde65d741f33261641e268c48cf5ca5c03b8b0d18c7c3310103e3ccba93bf710",
+      "destination_sha256": "bde65d741f33261641e268c48cf5ca5c03b8b0d18c7c3310103e3ccba93bf710",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0117e51376d7790fd074b92214f6f796d99fd151",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T03:08:56+08:00",
+        "subject": "Move DMA recovery into resident driver domains"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/regs.rs",
+      "destination": "server/src/regs.rs",
+      "source_blob": "2cb745ec7e721c315b0c7692d488d69293459c4b",
+      "source_sha256": "f88c4c45711e6ba9e9d1ee43ad8508a64dce6dd1cbb777fe7848a970cf03aff2",
+      "destination_sha256": "f88c4c45711e6ba9e9d1ee43ad8508a64dce6dd1cbb777fe7848a970cf03aff2",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "6d9ecf68d80a7a6a9c05dd1c44eee3d287ab0657",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-17T20:15:08+08:00",
+        "subject": "refactor(device): one type per file, and revoke the endpoint on a pre-publish failure"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/serve.rs",
+      "destination": "server/src/serve.rs",
+      "source_blob": "b0e0feeb2c9363bd99e2cb005785592d1a09f36d",
+      "source_sha256": "ad9278fcc211fc7430debd57c5d843dcbd4d3ea9c57a20bee144e2104d1ec21e",
+      "destination_sha256": "b7a6a1ff5be521b8412236371995177536d5733af2803125ce25edde17835d00",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/settled.rs",
+      "destination": "server/src/settled.rs",
+      "source_blob": "7b503a0d1bdd9db856df5bb2ca0cd3b1518e0456",
+      "source_sha256": "af961ba40ab7ff48f741930e5e818914d8e9db5c80b1892ae21df2510e11c355",
+      "destination_sha256": "c9731299ca70945b33115b443007c0d75814e61b8ea5f6fe6833294241a3a69d",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "aa936e15a491201045507d4423e765acbe9b7b4a",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T19:32:49+08:00",
+        "subject": "Allocate DMA ranges in persistent IOMMU domains and deliver exact resource tokens"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/table.rs",
+      "destination": "server/src/table.rs",
+      "source_blob": "fcf16b03d33562d209da0887afd67316943adc4f",
+      "source_sha256": "03b2b101f55ea03567df97b87537af486d20921b51f9c35d4311a781c231f98f",
+      "destination_sha256": "03b2b101f55ea03567df97b87537af486d20921b51f9c35d4311a781c231f98f",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0117e51376d7790fd074b92214f6f796d99fd151",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T03:08:56+08:00",
+        "subject": "Move DMA recovery into resident driver domains"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/ticket.rs",
+      "destination": "server/src/ticket.rs",
+      "source_blob": "579761f0221e7dc072b52e2a0469bf1a20211754",
+      "source_sha256": "47170eb33dc267b740417c649b55512738b3ba6b47277137f7ef57bdeef3bfc8",
+      "destination_sha256": "47170eb33dc267b740417c649b55512738b3ba6b47277137f7ef57bdeef3bfc8",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "ee2f94cbfefbe081a263762595586240e6eb4093",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T14:47:50+08:00",
+        "subject": "Keep IOMMU publish and retire completions independently owned"
+      }
+    },
+    {
+      "source": "programs/src/driver/shared/platform.rs",
+      "destination": "server/src/support/platform.rs",
+      "source_blob": "677715db1ff465101c38bd7cb5865a62ebc8464d",
+      "source_sha256": "2b5d0dbbf66e8fa6c30066ea4361c00619676e9cd51fe8898fd415d932a5591a",
+      "destination_sha256": "2b5d0dbbf66e8fa6c30066ea4361c00619676e9cd51fe8898fd415d932a5591a",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "2c17c3877e3f8c67d9db5634d693fa4303d47f8c",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-26T01:13:52+08:00",
+        "subject": "Separate Unit declarations, runtime composition and image building"
+      }
+    },
+    {
+      "source": "programs/src/driver/shared/retention.rs",
+      "destination": "server/src/support/retention.rs",
+      "source_blob": "32811bcfb8a12f63cd8cee8a0a2c54d26e42f535",
+      "source_sha256": "45b07d5886f8823d4a55d3b4f3031a85320235539b29023001e45cf32c97566a",
+      "destination_sha256": "45b07d5886f8823d4a55d3b4f3031a85320235539b29023001e45cf32c97566a",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0117e51376d7790fd074b92214f6f796d99fd151",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T03:08:56+08:00",
+        "subject": "Move DMA recovery into resident driver domains"
+      }
+    },
+    {
+      "source": "programs/src/driver/shared/lookup.rs",
+      "destination": "server/src/support/lookup.rs",
+      "source_blob": "1e994c00c2c19fdef1fcc109ce5d379dde70c973",
+      "source_sha256": "79058aa92f0036c97ceed8744d8ce760c50431759d733c4a0e5b1bf90246e6f5",
+      "destination_sha256": "6e77371bdfa98caf7acbd0e71fd02c12afb04efb8e3384db51e8238b1af1d527",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0db30aae92fcd64f9c98cd5b04d5961ef1c83b51",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T13:14:05+08:00",
+        "subject": "Move hardware coordination into the device Driver and qualify device identity"
+      }
+    },
+    {
+      "source": "programs/src/driver/shared/order.rs",
+      "destination": "server/src/order.rs",
+      "source_blob": "f1d254ba69abda234424891343d106b30616dd5f",
+      "source_sha256": "5e787406785438fa05a9b6bbe5b76803b4cb62f1aa6c8018ad877f019a352837",
+      "destination_sha256": "5e787406785438fa05a9b6bbe5b76803b4cb62f1aa6c8018ad877f019a352837",
+      "mechanical_body_comparison": "matched",
+      "last_source_change": {
+        "commit": "0db30aae92fcd64f9c98cd5b04d5961ef1c83b51",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-24T13:14:05+08:00",
+        "subject": "Move hardware coordination into the device Driver and qualify device identity"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/main.rs",
+      "destination": "server/src/main.rs",
+      "source_blob": "dc5427024a4af34ff85f2bd6f1b1cdd0d71df85a",
+      "source_sha256": "90d360154cd0b2053b76a5e9ee034a325d6d58dc10baa32149ca1fd446ae14b7",
+      "destination_sha256": "49b44e44af25f6a9a28eb9c4d8037c21a177c9141fc34c93d21c24c88a216107",
+      "adaptation": "Entry wrapper uses mold/execution directly; same serve call and success/error reports.",
+      "last_source_change": {
+        "commit": "0117e51376d7790fd074b92214f6f796d99fd151",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-21T03:08:56+08:00",
+        "subject": "Move DMA recovery into resident driver domains"
+      }
+    },
+    {
+      "source": "programs/src/driver/iommu/mod.rs",
+      "destination": "server/src/lib.rs",
+      "source_blob": "c569c0c46f56905c83e65dee8a5803be7eec42eb",
+      "source_sha256": "81807204f6215422e8880f06eb5affd90e01eb65b7bbddce416fdaa01abfac8a",
+      "destination_sha256": "a6e452ede18c24c2a111df6b48dbc8144bf76ea1ff0640bd4b9ed162342ea149",
+      "adaptation": "Crate root module/dependency glue; existing runtime bodies stay separate.",
+      "last_source_change": {
+        "commit": "b022cc08d2b040fdff59b564f4f8c1066ccf4d00",
+        "author": "anreonyr",
+        "email": "anreonyr@gmail.com",
+        "date": "2026-10-27T19:01:09+08:00",
+        "subject": "Compile the IOMMU reference-holding mechanism as a package"
+      }
+    }
+  ],
+  "not_imported": [
+    "Old scenes, probes, tests and fixtures",
+    "cfg(test) Core::set_next_iova",
+    "Unused generic lookup::peer and unrelated shared DMA client"
+  ],
+  "existing_public_packages_unchanged": [
+    "api",
+    "hold",
+    "declaration PROGRAM/bindings/marks"
+  ],
+  "runtime_dependency_reuse": {
+    "context": "driver-shared at bb3427e179e87b640e0d51115a44544fae231252",
+    "window_mark": "same hub_api::window_mark reexported by the old shared DMA helper"
+  }
+}
