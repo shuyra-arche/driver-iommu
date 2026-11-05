@@ -7,6 +7,17 @@ resolver = "3"
 version = "0.1.0"
 edition = "2024"
 
+# Standalone composition: select published forwarding packages for all legacy
+# SDK edges, including transitive pins. Consumers own their own composition.
+[replace]
+"git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae#env@0.1.0" = { git = "https://github.com/shuyra-arche/env.git", rev = "f54f9a1ab3f0df3631fb80ff2bf5d0cfaecbe927" }
+"git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57#wire@0.1.0" = { git = "https://github.com/shuyra-arche/wire.git", rev = "4b7619fda4bbd202e9a5c952872a84c2145c681e" }
+"git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9#mold@0.1.0" = { git = "https://github.com/shuyra-arche/mold.git", rev = "1addd302789e6a1c0dea6a7adf27e975a05d5ada" }
+"git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#kernel-api-env@0.1.0" = { git = "https://github.com/shuyra-arche/kernel.git", rev = "90d43dbf3ee43fd146f487718eb39e88f2507c05" }
+"git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8#system-client@0.1.0" = { git = "https://github.com/shuyra-arche/system.git", rev = "8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45" }
+"git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8#system-support@0.1.0" = { git = "https://github.com/shuyra-arche/system.git", rev = "8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45" }
+"git+https://github.com/shuyra-arche/driver.git?rev=bb3427e179e87b640e0d51115a44544fae231252#driver-shared@0.1.0" = { git = "https://github.com/shuyra-arche/driver.git", rev = "10379c3a1a47f26c82dfbd66438a73baed5016d6" }
+
 [profile.dev]
 panic = "abort"
 

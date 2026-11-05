@@ -17,9 +17,9 @@ checksum = "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06"
 [[package]]
 name = "driver-shared"
 version = "0.1.0"
-source = "git+https://github.com/shuyra-arche/driver.git?rev=bb3427e179e87b640e0d51115a44544fae231252#bb3427e179e87b640e0d51115a44544fae231252"
+source = "git+https://github.com/shuyra-arche/driver.git?rev=10379c3a1a47f26c82dfbd66438a73baed5016d6#10379c3a1a47f26c82dfbd66438a73baed5016d6"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "execution",
  "hub-api",
  "hub-client",
@@ -28,19 +28,29 @@ dependencies = [
  "router-api",
  "router-client",
  "system-api",
- "system-client",
- "system-support",
+ "system-client 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8)",
+ "system-support 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8)",
 ]
+
+[[package]]
+name = "driver-shared"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/driver.git?rev=bb3427e179e87b640e0d51115a44544fae231252#bb3427e179e87b640e0d51115a44544fae231252"
+replace = "driver-shared 0.1.0 (git+https://github.com/shuyra-arche/driver.git?rev=10379c3a1a47f26c82dfbd66438a73baed5016d6)"
 
 [[package]]
 name = "env"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae#d3000253cd5d13d466e91fafd4dbb27a5ec5aaae"
+replace = "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=f54f9a1ab3f0df3631fb80ff2bf5d0cfaecbe927)"
+
+[[package]]
+name = "env"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/env.git?rev=f54f9a1ab3f0df3631fb80ff2bf5d0cfaecbe927#f54f9a1ab3f0df3631fb80ff2bf5d0cfaecbe927"
 dependencies = [
- "bitflags",
- "erra",
- "mold",
- "wire",
+ "kernel-api-env 0.1.0 (git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05)",
+ "kernel-client",
 ]
 
 [[package]]
@@ -52,11 +62,9 @@ checksum = "bc36b9bc9f9fd011eb63c44cdba19d47c4e77f4759cddb0c448b1d23d27abc1e"
 [[package]]
 name = "execution"
 version = "0.1.0"
-source = "git+https://github.com/shuyra-arche/execution.git?rev=1b333a28bc4c34beaea3f7986a9bb6e8ab2db414#1b333a28bc4c34beaea3f7986a9bb6e8ab2db414"
+source = "git+https://github.com/shuyra-arche/execution.git?rev=ea49192e5df8bf744e083ced23ff0908b5bab3a3#ea49192e5df8bf744e083ced23ff0908b5bab3a3"
 dependencies = [
- "env",
- "spinning_top",
- "talc",
+ "kernel-client",
 ]
 
 [[package]]
@@ -70,10 +78,10 @@ name = "hub-api"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/hub.git?rev=cccef3f325198c8390007ae88b064bae0f21f93e#cccef3f325198c8390007ae88b064bae0f21f93e"
 dependencies = [
- "env",
- "mold",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
+ "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9)",
  "system-api",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
@@ -81,31 +89,31 @@ name = "hub-client"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/hub.git?rev=daa23b2611fee0c503bc6bd31a16121d97698ad6#daa23b2611fee0c503bc6bd31a16121d97698ad6"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "hub-api",
  "ipc",
  "resource",
  "system-api",
- "system-client",
- "wire",
+ "system-client 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8)",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
 name = "iommu-api"
 version = "0.1.0"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "hub-api",
  "iommu-declaration",
- "mold",
- "wire",
+ "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9)",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
 name = "iommu-declaration"
 version = "0.1.0"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "system-api",
  "unit",
 ]
@@ -114,29 +122,29 @@ dependencies = [
 name = "iommu-hold"
 version = "0.1.0"
 dependencies = [
- "kernel-api-env",
+ "kernel-api-env 0.1.0 (git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64)",
 ]
 
 [[package]]
 name = "iommu-server"
 version = "0.1.0"
 dependencies = [
- "driver-shared",
- "env",
+ "driver-shared 0.1.0 (git+https://github.com/shuyra-arche/driver.git?rev=bb3427e179e87b640e0d51115a44544fae231252)",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "execution",
  "hub-api",
  "iommu-api",
  "iommu-declaration",
  "iommu-hold",
  "ipc",
- "mold",
+ "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9)",
  "resource",
  "schedule",
  "system-api",
- "system-client",
- "system-support",
+ "system-client 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8)",
+ "system-support 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8)",
  "unit",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
@@ -144,15 +152,15 @@ name = "ipc"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/ipc.git?rev=29ad97dc08d9dfc4ea6578b1b77874261229b3b5#29ad97dc08d9dfc4ea6578b1b77874261229b3b5"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "resource",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
 name = "kernel-api-env"
 version = "0.1.0"
-source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05#90d43dbf3ee43fd146f487718eb39e88f2507c05"
 dependencies = [
  "bitflags",
  "erra",
@@ -161,9 +169,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "kernel-api-macros"
+name = "kernel-api-env"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
+replace = "kernel-api-env 0.1.0 (git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05)"
+
+[[package]]
+name = "kernel-api-macros"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05#90d43dbf3ee43fd146f487718eb39e88f2507c05"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -173,7 +187,18 @@ dependencies = [
 [[package]]
 name = "kernel-api-wire"
 version = "0.1.0"
-source = "git+https://github.com/shuyra-arche/kernel.git?rev=a9a1d8d788213597adb69605d1787bdef65d2b64#a9a1d8d788213597adb69605d1787bdef65d2b64"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05#90d43dbf3ee43fd146f487718eb39e88f2507c05"
+
+[[package]]
+name = "kernel-client"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05#90d43dbf3ee43fd146f487718eb39e88f2507c05"
+dependencies = [
+ "erra",
+ "kernel-api-env 0.1.0 (git+https://github.com/shuyra-arche/kernel.git?rev=90d43dbf3ee43fd146f487718eb39e88f2507c05)",
+ "spinning_top",
+ "talc",
+]
 
 [[package]]
 name = "lock_api"
@@ -187,7 +212,22 @@ dependencies = [
 [[package]]
 name = "mold"
 version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/mold.git?rev=1addd302789e6a1c0dea6a7adf27e975a05d5ada#1addd302789e6a1c0dea6a7adf27e975a05d5ada"
+dependencies = [
+ "kernel-api-macros",
+ "mold-entry",
+]
+
+[[package]]
+name = "mold"
+version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9#f52501f4c91b686eded8b4bcd743b4e96084b7f9"
+replace = "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=1addd302789e6a1c0dea6a7adf27e975a05d5ada)"
+
+[[package]]
+name = "mold-entry"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/mold.git?rev=1addd302789e6a1c0dea6a7adf27e975a05d5ada#1addd302789e6a1c0dea6a7adf27e975a05d5ada"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -217,7 +257,7 @@ name = "resource"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/resource.git?rev=dbc96834f50f094b5c386e54a0a2ae5560dcd7f8#dbc96834f50f094b5c386e54a0a2ae5560dcd7f8"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "erra",
 ]
 
@@ -226,10 +266,10 @@ name = "router-api"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/router.git?rev=94fec223f3c5df6c99a49527a65d016d88de3af4#94fec223f3c5df6c99a49527a65d016d88de3af4"
 dependencies = [
- "env",
- "mold",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
+ "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9)",
  "system-api",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
@@ -237,11 +277,11 @@ name = "router-client"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/router.git?rev=aa3033a7bd25b5d4199a50a6c00538475b62ef4c#aa3033a7bd25b5d4199a50a6c00538475b62ef4c"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "ipc",
  "resource",
  "router-api",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
@@ -280,30 +320,42 @@ name = "system-api"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/system.git?rev=9e5d63ca536a176583cf1b0054b4ecf7ddd88257#9e5d63ca536a176583cf1b0054b4ecf7ddd88257"
 dependencies = [
- "env",
- "mold",
- "wire",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
+ "mold 0.1.0 (git+https://github.com/shuyra-arche/mold.git?rev=f52501f4c91b686eded8b4bcd743b4e96084b7f9)",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
 name = "system-client"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8#5a792ff2d39901a970925b1a6d63206adf6c16d8"
+replace = "system-client 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45)"
+
+[[package]]
+name = "system-client"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/system.git?rev=8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45#8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "execution",
  "ipc",
  "resource",
  "system-api",
- "wire",
+ "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57)",
 ]
 
 [[package]]
 name = "system-support"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/system.git?rev=5a792ff2d39901a970925b1a6d63206adf6c16d8#5a792ff2d39901a970925b1a6d63206adf6c16d8"
+replace = "system-support 0.1.0 (git+https://github.com/shuyra-arche/system.git?rev=8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45)"
+
+[[package]]
+name = "system-support"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/system.git?rev=8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45#8eea7c9039cac0e6ada4a59c612dc6c98ef9bc45"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "execution",
  "fdt",
  "hub-api",
@@ -331,7 +383,7 @@ name = "unit"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/unit.git?rev=90396f0fda376e0693fb1b9553aa21864d241057#90396f0fda376e0693fb1b9553aa21864d241057"
 dependencies = [
- "env",
+ "env 0.1.0 (git+https://github.com/shuyra-arche/env.git?rev=d3000253cd5d13d466e91fafd4dbb27a5ec5aaae)",
  "system-api",
 ]
 
@@ -339,3 +391,12 @@ dependencies = [
 name = "wire"
 version = "0.1.0"
 source = "git+https://github.com/shuyra-arche/wire.git?rev=0ff77dc4573fa2620d2fe995a18c01949d9c7e57#0ff77dc4573fa2620d2fe995a18c01949d9c7e57"
+replace = "wire 0.1.0 (git+https://github.com/shuyra-arche/wire.git?rev=4b7619fda4bbd202e9a5c952872a84c2145c681e)"
+
+[[package]]
+name = "wire"
+version = "0.1.0"
+source = "git+https://github.com/shuyra-arche/wire.git?rev=4b7619fda4bbd202e9a5c952872a84c2145c681e#4b7619fda4bbd202e9a5c952872a84c2145c681e"
+dependencies = [
+ "kernel-api-wire",
+]

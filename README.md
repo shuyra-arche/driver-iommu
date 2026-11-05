@@ -22,9 +22,10 @@ endpoint reset and VirtIO protocol policy remain with their owners.
 
 The existing public API, `PROGRAM` and hold bodies are unchanged. No old
 probe, guest scene, test suite or test-only cursor mutator is migrated here.
-The server reuses the published `driver-shared::context` at immutable Driver
-revision `bb3427e179e87b640e0d51115a44544fae231252` and the existing SDK pins.
-It has no sqware or PCI runtime dependency, patch override or local Git backlink.
+The server reuses the published `driver-shared::context`. The workspace root
+selects its SDK dependencies from immutable public Git revisions, including
+legacy transitive edges; see [canonical API validation](CANONICAL-API-VALIDATION.md).
+It has no sqware or PCI runtime dependency or local Git backlink.
 
 ## Runtime declaration
 
@@ -71,12 +72,14 @@ or replacement state account is introduced.
 `TaskId` from `kernel-api-env`, imported as `env` from Kernel revision
 `a9a1d8d788213597adb69605d1787bdef65d2b64`. This direct API dependency keeps
 Kernel Client out of the ledger's normal/build closure when Kernel Server
-uses it. Other packages retain their existing SDK pins; the standalone driver
-must use an `env` compatibility revision that forwards these same API types.
+uses it. That package-level pin stays fixed. The standalone workspace's root
+composition selects API revision `90d43dbf3ee43fd146f487718eb39e88f2507c05`
+for the whole driver, while consumers such as Kernel own their own composition.
 
 ## Build and focused interface checks
 
-Use the pinned `nightly-2026-09-04` toolchain:
+The repository pins `nightly-2026-09-04`; this migration was verified with the
+installed `nightly-2026-10-09` toolchain. Standalone builds remain supported:
 
 ```sh
 cargo check --locked --offline -p iommu-server --target riscv64gc-unknown-none-elf
@@ -84,14 +87,14 @@ cargo build --locked --offline --release -p iommu-server --bin iommu --target ri
 cargo test --locked --offline -p iommu-api -p iommu-hold --target x86_64-unknown-linux-gnu
 ```
 
-With the canonical hold dependency, the API/hold host tests pass (18 cases)
-and the hold RV64 check passes on the installed `nightly-2026-10-09` toolchain.
-The ledger's `--target all --edges normal,build` tree has one canonical Kernel
-API owner and no Client. The unpatched Server RV64 check currently fails at
-the original SDK pins: legacy `env` and canonical API types differ at the
-`MemoryEffects`, `Scope`, registration and reference-range boundaries.
-Server acceptance therefore also requires the forwarding `env` facade in the
-product composition; no successful Server or image build is claimed here.
+These standalone commands pass using only the root's public Git selections and
+committed lock: RV64 Server check, release `iommu` ELF, and 18 API/hold host
+tests. The earlier `90f59ef` checkpoint introduced six dual-ABI type errors;
+the dependency selections in this revision repair that regression without
+changing Server or Runtime bodies. The effective Server/API/hold graphs share
+one canonical API owner; the ledger's normal/build graph has no Client.
+The validation record documents the exact source selections, Cargo's deprecated
+`[replace]` tradeoff, CLI overlay checks, and remaining acceptance limits.
 
 Prepare the immutable dependency cache before using `--offline`. The runtime
 contains real RISC-V ordering instructions; host checks target the public API
