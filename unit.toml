@@ -1,0 +1,50 @@
+schema = 1
+id = "iommu"
+
+[loader]
+image = "iommu"
+space = "supervisor"
+args = []
+stack = 0
+
+[[operator.namespace]]
+key = "service"
+placement = "shared"
+path = "iommu"
+scope = "subtree"
+ops = 279 # PART | UNPART | BIND | UNBIND | FIND
+permit = "public"
+source_mark = "15793452184282291657" # iommu_declaration::marks::ENTRY
+bindings = []
+
+[identity]
+aliases = []
+grants = []
+
+[control]
+creation = "startup"
+# System completes Operator and Identity bootstrap before creating Units.
+requires = ["hub"]
+after = ["hub"]
+ready = { signal = "9887014109901452468" } # unit::READY_MARK
+ending = "resident"
+construction = []
+groups = []
+guarded = false
+
+[[control.retirement]]
+provider = "hub"
+namespace = 0
+face = "retire"
+
+[[supply.bindings]]
+source = "system/initrd"
+resource = "memory/retention"
+slot = "14481635175497462215" # iommu_declaration::bindings::RETENTION.slot
+permission = 1 # FETCH on the collection manifest, not its retained authority
+
+[[supply.bindings]]
+source = "system/initrd"
+resource = "platform/iommu"
+slot = "13195352431758841623" # iommu_declaration::bindings::REGION.slot
+permission = 1 # FETCH on the manifest; the register window stays FETCH | STORE | ONLY
