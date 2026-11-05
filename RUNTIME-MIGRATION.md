@@ -51,6 +51,25 @@ this source migration. Exact command logs, source comparisons, artifact hashes
 and genuine DeepSeek namer/worker/reviewer evidence are retained in the task's
 execution workspace.
 
+## Dynamic Unit intake checkpoint
+
+Root `unit.toml` adds schema 1 discovery without moving or changing the runtime
+bodies. `PROGRAM`, the production dependency revisions and provider lock stay
+unchanged. The supervisor address space, source mark, namespace operations,
+resident/ready policies, Hub retirement and both manifest supplies are retained.
+System owns Operator/Identity bootstrap; the packaged provider closure is `hub`
+in both `control.requires` and `control.after`.
+
+The independent `tests/unit-document` workspace uses public Unit SDK
+`ad50b803c3bd5cd2ef90010d80badf23551e88d5` with its own committed lock. On
+`nightly-2026-10-09`, its three focused checks pass: complete document policy
+preservation, binary record/runtime conversion with supplies and Hub retirement,
+and the existing Cargo image coordinates. The 18 existing API/hold tests also
+pass on that toolchain. These host checks do not run the MMIO mechanism or prove
+DMA isolation, queue completion, recovery or teardown on hardware. They add no
+old test suite or kernel cluster; product composition validation belongs to the
+Vanllia intake checkpoint.
+
 ## Attribution and license
 
 The selected source history identifies `anreonyr` under the source-recorded
