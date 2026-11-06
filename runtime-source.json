@@ -2,7 +2,7 @@
   "source_repository": "https://github.com/anreonyr/sqware.git",
   "source_commit": "94e114614bec53424ac55e640fc80cf19a3e7107",
   "provider_base": "5d2038033efcbd55de77534b35e611729d4bd9bd",
-  "original_contract_provenance": "PROVENANCE.md (unchanged)",
+  "original_contract_provenance": "PROVENANCE.md",
   "license_added": false,
   "source_license_file_found": false,
   "files": [
